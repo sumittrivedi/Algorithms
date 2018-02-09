@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1503478524 source:d:\sumit114\matrix chain order\main.c
+	<stdio.h>
+	<stdlib.h>
+	<limits.h>
+

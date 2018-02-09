@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1505902532 source:d:\sumit114_algo\kmp algo\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<malloc.h>
+
+1505904688 source:g:\new folder\kmp algo\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<malloc.h>
+

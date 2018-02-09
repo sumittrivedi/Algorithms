@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1505905374 source:d:\sumit114_algo\quicksort\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1505905374 source:g:\new folder\quicksort\main.c
+	<stdio.h>
+	<stdlib.h>
+

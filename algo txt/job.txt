@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void job(int d[10], int p[10], int n)
+{
+int t=0;
+int i,j,m,k=n+1;
+
+printf("\n\tsolution\t\tsequence\t\tprofit\n");
+for(i=1;i<=n;i++)
+    {
+        printf("The value of i and profit is %d %d",i,p[i]);
+
+
+        if(t<p[i])
+
+                //t=0;
+                t=p[i];
+
+    }
+
+for(i=1;i<=n;i++)
+{
+    for(j=i+1;j<=n;j++)
+    {
+        if(d[i]!=d[j])
+        {
+            m=p[i]+p[j];
+
+        if(d[i]>d[j])
+        {
+            printf("\t%d\t%d\t%d\t%d\t%d\t%d",k,i,j,j,i,m);
+        }
+        else
+        {
+            printf("\t%d\t%d\t%d\t%d\t%d\t%d",k,i,j,i,j,m);
+            k++;
+        }
+            if(m>t)
+            {
+                t=m;
+            }
+        }
+    }
+    }
+    printf("The maximum profit is=%d\n",t);
+}
+
+
+int main()
+{
+    int n,d[10],i,p[10];
+    printf("Enter the number of objects: \n");
+    scanf("%d",&n);
+    printf("Enter the deadline: \n");
+
+    for(i=1;i<=n;i++)
+    {
+        scanf("%d",&d[i]);
+    }
+
+    printf("Enter the profit of objects: \n");
+
+    for(i=1;i<=n;i++)
+    {
+        scanf("%d",&p[i]);
+    }
+    job(d,p,n);
+    return 0;
+}

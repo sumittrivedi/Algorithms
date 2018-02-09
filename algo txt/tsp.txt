@@ -1,0 +1,75 @@
+#include <stdio.h>
+#include <stdlib.h>
+# define infinity 999
+
+int n,i,j,visited[20],cost=0,costmat[10][10];
+void get()
+{
+
+    printf("Enter the number of cities:");
+    scanf("%d",&n);
+
+    printf("Enter the cost matrix:\n");
+     for(i=0;i<n;i++)
+     {
+
+        for(j=0;j<n;j++)
+
+            scanf("%d",&costmat[i][j]);
+
+             visited[i]=0;
+         }
+}
+
+int least(int c)
+{
+    int ne=999,min=999,kmin;
+    for(i=1;i<=n;i++)
+    {
+        if ((costmat[c][i]!=0) && (visited[i]==0))
+
+            if (costmat[c][i]<min)
+                {
+                    min=costmat[i][0]+costmat[c][i];
+                    kmin=costmat[c][i];
+                    ne=i;
+                }
+
+    }
+    if(min!=999)
+
+        cost=cost+kmin;
+
+    return ne;
+}
+
+void mincost(int city)
+{
+    int ncity;
+    visited[city]=1;
+    printf("city+1=%d----->",city+1);
+    ncity=least(city);
+    if(ncity==999)
+    {
+        ncity=0;
+        printf("ncity+1=%d->",ncity+1);
+        cost=cost+costmat[city][ncity];
+        return ;
+    }
+    mincost(ncity);
+}
+
+void put()
+{
+    int cost;
+    printf("The cost is: %d",cost);
+}
+
+
+int main()
+{
+    get();
+    mincost(0);
+    printf("\nThe minimum cost is %d\n",cost);
+    return 0;
+}

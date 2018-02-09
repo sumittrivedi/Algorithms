@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+match(char text[], char pattern[])
+{
+    int c,d,e,pos=-1;
+    int t_l=strlen(text);
+    int p_l=strlen(pattern);
+
+    if(p_l>t_l)
+    {
+        return -1;
+    }
+
+    for(c=0;c<(t_l-p_l);c++)
+    {
+        pos=e=c;
+        for(d=0;d<(p_l);d++)
+        {
+            if (pattern[d]==text[e])
+                {
+                    e++;
+                }
+                else
+                break;
+        }
+        if(d==p_l)
+        {
+            return pos;
+        }
+    }
+        return -1;
+}
+
+int main()
+{
+    int pos;
+    char a[20];
+    char b[20];
+
+    printf("Enter the text:\n");
+    scanf("%s",&a);
+    printf("Enter the other string:\n");
+    scanf("%s",&b);
+
+    pos=match(a,b);
+    if(pos!=-1)
+        printf("String was found at location %d",pos+1);
+    else
+        printf("string was not found");
+    return 0;
+}

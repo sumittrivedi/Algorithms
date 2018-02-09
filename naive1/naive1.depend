@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1511369482 source:e:\algorithm\naive1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

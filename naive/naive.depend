@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1505475646 source:d:\sumit114\naive\main.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1505475673 source:d:\sumit114_algo\naive\main.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
